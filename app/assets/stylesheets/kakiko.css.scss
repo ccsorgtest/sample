@@ -1,0 +1,13 @@
+// Place all the styles related to the kakiko controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comment{
+	padding-left: 20px;
+}
+.content{
+	overflow: scroll;
+	height: 300px;
+	border-top: 1px dashed #aaaaaa;
+	border-bottom: 1px dashed #aaaaaa;
+}

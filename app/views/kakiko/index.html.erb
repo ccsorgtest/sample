@@ -1,0 +1,26 @@
+
+<%= form_tag({:controller => 'kakiko', :action => 'create'}) do %>
+	<div class="field">
+		<%= text_area :kakiko , :kakikomi, {:size => "25x5",:maxlength => 180} %>
+		<%= hidden_field :kakiko, :ita_id %>
+		<%= submit_tag 'かきかき' %>
+	</div>
+<% end %>
+<div class="content">
+	<table class="table-main">
+		<% @kakikos.each_with_index do |kakiko, i| %>
+			<tr>
+				<td>
+					<%= i + 1 %>
+				</td>
+				<td>
+					<%= kakiko.created_at.strftime("%Y-%m-%d(#{%w(日 月 火 水 木 金 土)[kakiko.created_at.wday]}) %H:%M:%S") %>
+				</td>
+			<tr>
+				<td colspan="2" class="comment"><%= hbr(kakiko.kakikomi) %></td>
+		<% end %>
+	</table>
+</div>
+
+<%= render :file => "/ita/create" %>
+<%= link_to 'top', ita_path %>

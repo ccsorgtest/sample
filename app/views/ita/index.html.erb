@@ -1,0 +1,13 @@
+
+
+<div class="content">
+	<table class="table-main">
+		<% @itas.each_with_index do |ita, i| %>
+			<tr>
+				<td>
+					<%= i + 1 %>
+					<%= link_to(ita.title, :controller => 'kakiko', :action => 'index', :id => ita.id) %>
+				</td>
+		<% end %>
+	</table>
+</div>

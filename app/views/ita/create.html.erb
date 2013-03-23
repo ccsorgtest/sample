@@ -1,0 +1,14 @@
+<%= form_tag({:controller => 'ita', :action => 'create'}) do %>
+	<div class="field">
+		<table>
+			<tr>
+				<td>
+					タイトル<%= text_field :ita ,:title, {:size => "25"} %>
+				</td>
+				<td>
+					<%= submit_tag '新規スレッド' %>
+				</td>
+			</tr>
+		</table>
+	</div>
+<% end %>
